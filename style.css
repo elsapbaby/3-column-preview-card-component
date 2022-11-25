@@ -1,0 +1,145 @@
+
+:root{
+    /*---- Colours------*/
+    
+/*-----Primary-colors---------*/
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+
+/*-----Neutral-colours-------*/
+
+--transparent-white: hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+--very-light-gray : hsl(0, 0%, 95%);/*(background, headings, buttons)*/
+
+    /*---- Typography------*/
+
+/*--- Font family----*/
+--ff-small:'Lexend Deca';
+ --ff-big:'Big Shoulders Display', 'cursive';
+
+}
+
+  body{
+    font-family:var(--ff-small) ;
+    font-size: 15px;
+    font-weight: var(--fw-small);
+    background-color: var(--very-light-gray); 
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+  }
+  .card{
+     max-width: 990px;
+     margin: 0 auto;
+    
+  }
+
+   
+.card-category{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 2rem;
+   
+    
+
+}
+.box{
+    padding: 3rem 2rem;
+}
+.card-sedan{
+   
+    background-color: var(--bright-orange);
+    color: var(--very-light-gray);
+    
+    
+}
+.card-suv{
+    background-color: var(--dark-cyan);
+    color: var(--very-light-gray);
+    
+}
+.card-luxury{
+    background-color: var(--very-dark-cyan);
+    color: var(--very-light-gray);
+    
+}
+
+h2{
+    font-family: var(--ff-big);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: var(--very-light-gray);
+}
+p {
+    font-family: var(--ff-small);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--very-light-gray);
+    margin-bottom: 3.5rem;
+    line-height: 1.6;
+}
+a {
+    
+    
+    background-color:#fff;
+    text-decoration: none;
+    
+     border-radius: 2rem;
+     padding: 1rem 2rem;
+     
+     cursor: pointer;
+     transition: all .1s;
+     display: inline-block;
+    margin-top: 1rem;
+     
+ 
+ 
+}
+.card-sedan a {
+    color: var(--bright-orange);
+}
+
+.card-sedan a:hover {
+    background-color: var(--bright-orange);
+    color: #fff;
+    border: 1px solid var(--very-light-gray);
+}
+.card-suv a {
+    color: var(--dark-cyan);
+}
+.card-suv a:hover {
+    background-color: var(--dark-cyan);
+    color: #fff;
+    border: 1px solid var(--very-light-gray);
+   
+}
+.card-luxury a {
+    color: var(--very-dark-cyan);
+}
+.card-luxury a:hover  {
+    background-color: var(--very-dark-cyan);
+    color: #fff;
+    border: 1px solid var(--very-light-gray);
+   
+}
+
+@media only screen and (max-width: 800px){
+    .card-category{
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 425px){
+    .card-category{
+        margin: 2rem .5rem;
+    }
+}
+
+
